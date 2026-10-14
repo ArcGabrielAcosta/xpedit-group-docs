@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xpedit Group — Dashboard encuesta de validación</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <style>
+    :root {
+      --navy: #0A193F;
+      --cyan: #00B4D8;
+      --red: #FF4D6D;
+      --bg: #0B1224;
+      --card: #111A33;
+      --text: #E2E8F0;
+      --muted: #94A3B8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: Calibri, Segoe UI, sans-serif;
+      background: linear-gradient(160deg, #061028 0%, #0A193F 45%, #0F274F 100%);
+      color: var(--text); min-height: 100vh;
+    }
+    header {
+      padding: 28px 32px 12px; border-bottom: 2px solid var(--cyan);
+    }
+    header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+    header p { margin: 0; color: var(--muted); }
+    .brand { color: var(--cyan); font-weight: 700; letter-spacing: .04em; }
+    .wrap { padding: 24px 32px 48px; max-width: 1280px; margin: 0 auto; }
+    .status {
+      margin: 12px 0 0; font-size: .9rem; color: var(--muted);
+    }
+    .status.error { color: #FCA5A5; }
+    #file-fallback {
+      margin-top: 12px; padding: 12px 14px;
+      background: var(--card); border: 1px dashed #1E3A5F; border-radius: 10px;
+      font-size: .9rem; color: var(--muted);
+    }
+    #file-fallback label { display: block; margin-bottom: 8px; }
+    .kpis {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0 28px;
+    }
+    .kpi {
+      background: var(--card); border: 1px solid #1E3A5F; border-radius: 12px;
+      padding: 16px 14px; box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    }
+    .kpi .v { font-size: 1.7rem; font-weight: 800; color: var(--cyan); }
+    .kpi .l { font-size: .82rem; color: var(--muted); margin-top: 4px; }
+    .grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .card {
+      background: var(--card); border: 1px solid #1E3A5F; border-radius: 12px;
+      padding: 16px; min-height: 320px;
+    }
+    .card h2 { margin: 0 0 10px; font-size: 1rem; color: #fff; }
+    .full { grid-column: 1 / -1; }
+    canvas { max-height: 280px; }
+    footer { color: var(--muted); font-size: .85rem; margin-top: 24px; }
+    code { color: var(--cyan); font-size: .85em; }
+    @media (max-width: 900px) {
+      .kpis, .grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .kpis, .grid { grid-template-columns: 1fr; }
+      .wrap, header { padding-left: 16px; padding-right: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">XPEDIT GROUP</div>
+    <h1>Dashboard — Encuesta de validación</h1>
+    <p>“Donde corresponde, cuando importa.” · SaaS bandera blanca · N = <span id="n">…</span></p>
+    <p class="status" id="status">Inicializando…</p>
+    <div id="file-fallback" hidden>
+      <label for="csv-file">Elegí el CSV de la encuesta (mismo archivo de esta carpeta):</label>
+      <input id="csv-file" type="file" accept=".csv,text/csv" />
+      <p style="margin: 8px 0 0">
+        O serví la carpeta:
+        <code>node server.js</code>
+        y abrí
+        <code>http://localhost:8080/dashboard-encuesta.html</code>
+      </p>
+    </div>
+  </header>
+  <div class="wrap">
+    <div class="kpis" id="kpis"></div>
+    <div class="grid">
+      <div class="card"><h2>Cobertura</h2><canvas id="c_cobertura"></canvas></div>
+      <div class="card"><h2>Zona</h2><canvas id="c_zona"></canvas></div>
+      <div class="card"><h2>Edad</h2><canvas id="c_edad"></canvas></div>
+      <div class="card"><h2>Primer paso ante urgencia</h2><canvas id="c_primer_paso"></canvas></div>
+      <div class="card"><h2>Mayor preocupación</h2><canvas id="c_dolor"></canvas></div>
+      <div class="card"><h2>Quién debería respaldar</h2><canvas id="c_respaldo"></canvas></div>
+      <div class="card"><h2>Fricción 107 ↔ cobertura privada</h2><canvas id="c_friccion_107"></canvas></div>
+      <div class="card"><h2>Qué valoran más</h2><canvas id="c_valora"></canvas></div>
+      <div class="card full"><h2>Frenos (menciones)</h2><canvas id="c_freno"></canvas></div>
+      <div class="card full"><h2>Escalas 1–5 (claridad / utilidad / ficha / intención)</h2><canvas id="c_escalas"></canvas></div>
+    </div>
+    <footer>
+      Fuente: <code>Encuesta de validación.csv</code> · KPIs y gráficos calculados en el navegador por
+      <code>dashboard.js</code> · Colores de marca Xpedit.
+    </footer>
+  </div>
+  <script src="dashboard.js"></script>
+</body>
+</html>
