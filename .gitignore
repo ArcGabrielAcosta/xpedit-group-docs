@@ -1,2 +1,9 @@
-# Cursor
+# IDEs
 .cursor
+.idea
+
+# Next.js
+node_modules
+.next
+out
+*.tsbuildinfo
