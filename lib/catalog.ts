@@ -137,6 +137,17 @@ export const sections: DocSection[] = [
       },
     ],
   },
+  {
+    id: "modelado",
+    title: "Modelado",
+    docs: [
+      {
+        slug: "19-diagrama-casos-de-uso",
+        title: "Casos de uso",
+        description: "Versión inicial del diagrama de casos de uso del piloto",
+      },
+    ],
+  },
 ];
 
 export const docs = sections.flatMap((section) => section.docs);

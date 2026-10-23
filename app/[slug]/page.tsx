@@ -34,8 +34,10 @@ export default async function DocPage({ params }: { params: Promise<Params> }) {
   const section = findSection(slug);
   const { prev, next } = neighbors(slug);
 
+  const wide = doc.content.includes("](/diagrams/");
+
   return (
-    <div className="doc-layout">
+    <div className={wide ? "doc-layout wide" : "doc-layout"}>
       <article className="doc">
         <p className="eyebrow">
           {section?.title} · {slug.slice(0, 2)}

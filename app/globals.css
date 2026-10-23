@@ -411,6 +411,26 @@ button, input { font: inherit; }
   padding: 0;
 }
 
+.figure {
+  display: block;
+  overflow-x: auto;
+  margin: 1.2em 0 1.6em;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  min-width: 920px;
+  height: auto;
+}
+
+.doc-layout.wide {
+  grid-template-columns: minmax(0, 1fr);
+}
+
 .prose hr {
   border: 0;
   border-top: 1px solid var(--line);

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { sections } from "@/lib/catalog";
+import { docs, sections } from "@/lib/catalog";
 
 export default function HomePage() {
   return (
@@ -25,7 +25,7 @@ export default function HomePage() {
 
       <ul className="stats">
         <li>
-          <strong>18</strong>
+          <strong>{docs.length}</strong>
           <span>documentos</span>
         </li>
         <li>

@@ -3,6 +3,7 @@ import type { Components } from "react-markdown";
 import ReactMarkdown from "react-markdown";
 import rehypeSlug from "rehype-slug";
 import remarkGfm from "remark-gfm";
+import { basePath } from "@/lib/base-path";
 import { rewriteHref } from "@/lib/docs";
 
 const components: Components = {
@@ -25,6 +26,16 @@ const components: Components = {
       <div className="table-wrap">
         <table>{children}</table>
       </div>
+    );
+  },
+  img({ src, alt }) {
+    if (!src) return null;
+    const href =
+      src.startsWith("/") && basePath && !src.startsWith(`${basePath}/`) ? `${basePath}${src}` : src;
+    return (
+      <span className="figure">
+        <img src={href} alt={alt ?? ""} />
+      </span>
     );
   },
 };

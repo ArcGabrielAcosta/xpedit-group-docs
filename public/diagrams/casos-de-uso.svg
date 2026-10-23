@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 980" width="1180" height="980" role="img" aria-labelledby="title desc">
+  <title id="title">Casos de uso de Xpedit</title>
+  <desc id="desc">Versión inicial del diagrama de casos de uso del módulo de emergencias.</desc>
+  <defs>
+    <marker id="inc" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 Z" fill="#5b21b6"/>
+    </marker>
+    <marker id="ext" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 Z" fill="#b45309"/>
+    </marker>
+  </defs>
+  <rect x="168" y="16" width="760" height="810" rx="18" fill="#f4f7fb" stroke="#0A193F" stroke-width="2"/>
+  <text x="188" y="46" fill="#0e7490" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700">SISTEMA · MÓDULO DE EMERGENCIAS</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="18" font-weight="600" fill="#0A193F">
+    <ellipse cx="360" cy="112" rx="132" ry="36" fill="#fff1f3" stroke="#FF4D6D" stroke-width="2"/>
+    <text x="360" y="118" text-anchor="middle">Activar emergencia</text>
+
+    <ellipse cx="360" cy="230" rx="132" ry="36" fill="#fff7ed" stroke="#d97706" stroke-width="2"/>
+    <text x="360" y="236" text-anchor="middle">Cancelar alerta</text>
+
+    <ellipse cx="360" cy="360" rx="132" ry="36" fill="#ecfdf3" stroke="#0e7490" stroke-width="2"/>
+    <text x="360" y="366" text-anchor="middle">Confirmar envío</text>
+
+    <ellipse cx="360" cy="560" rx="132" ry="36" fill="#e7f6fb" stroke="#0A193F" stroke-width="2"/>
+    <text x="360" y="566" text-anchor="middle">Mantener la ficha</text>
+
+    <ellipse cx="360" cy="680" rx="132" ry="36" fill="#e7f6fb" stroke="#0A193F" stroke-width="2"/>
+    <text x="360" y="686" text-anchor="middle">Seguir el traslado</text>
+
+    <ellipse cx="700" cy="300" rx="128" ry="36" fill="#f3e8ff" stroke="#6d28d9" stroke-width="2"/>
+    <text x="700" y="306" text-anchor="middle">Enviar paquete</text>
+
+    <ellipse cx="700" cy="460" rx="128" ry="36" fill="#f3e8ff" stroke="#6d28d9" stroke-width="2"/>
+    <text x="700" y="466" text-anchor="middle">Derivar por cartilla</text>
+
+    <ellipse cx="700" cy="620" rx="128" ry="36" fill="#f3e8ff" stroke="#6d28d9" stroke-width="2"/>
+    <text x="700" y="626" text-anchor="middle">Avisar al contacto</text>
+
+    <ellipse cx="700" cy="770" rx="128" ry="36" fill="#e7f6fb" stroke="#0A193F" stroke-width="2"/>
+    <text x="700" y="776" text-anchor="middle">Consultar el panel</text>
+  </g>
+
+  <line x1="360" y1="194" x2="360" y2="150" stroke="#b45309" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ext)"/>
+  <text x="372" y="178" fill="#b45309" font-family="Segoe UI, system-ui, sans-serif" font-size="14">«extiende»</text>
+
+  <line x1="492" y1="348" x2="572" y2="312" stroke="#5b21b6" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#inc)"/>
+  <text x="508" y="324" fill="#5b21b6" font-family="Segoe UI, system-ui, sans-serif" font-size="14">«incluye»</text>
+  <line x1="700" y1="336" x2="700" y2="424" stroke="#5b21b6" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#inc)"/>
+  <path d="M828 312 H890 V608 H830" fill="none" stroke="#5b21b6" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#inc)"/>
+
+  <g stroke="#0A193F" stroke-width="1.75" fill="none">
+    <line x1="116" y1="430" x2="228" y2="112"/>
+    <line x1="116" y1="430" x2="228" y2="230"/>
+    <line x1="116" y1="430" x2="228" y2="360"/>
+    <line x1="116" y1="430" x2="228" y2="560"/>
+    <line x1="116" y1="430" x2="228" y2="680"/>
+    <line x1="828" y1="460" x2="1030" y2="460"/>
+    <line x1="828" y1="620" x2="1030" y2="620"/>
+    <line x1="828" y1="770" x2="1030" y2="770"/>
+  </g>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" fill="#0A193F">
+    <g transform="translate(78,340)">
+      <circle cx="0" cy="0" r="16" fill="#e7f6fb" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="16" x2="0" y2="50" stroke="#0A193F" stroke-width="2"/>
+      <line x1="-18" y1="32" x2="18" y2="32" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="-16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <text x="0" y="104" text-anchor="middle" font-size="18" font-weight="700">Afiliado</text>
+      <text x="0" y="124" text-anchor="middle" font-size="13" fill="#5c6b80">o familiar a cargo</text>
+    </g>
+    <g transform="translate(1048,420)">
+      <circle cx="0" cy="0" r="16" fill="#fff7ed" stroke="#d97706" stroke-width="2"/>
+      <line x1="0" y1="16" x2="0" y2="50" stroke="#0A193F" stroke-width="2"/>
+      <line x1="-18" y1="32" x2="18" y2="32" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="-16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <text x="0" y="104" text-anchor="middle" font-size="18" font-weight="700">Prestador</text>
+      <text x="0" y="124" text-anchor="middle" font-size="13" fill="#5c6b80">central contratada</text>
+    </g>
+    <g transform="translate(1048,580)">
+      <circle cx="0" cy="0" r="16" fill="#f3e8ff" stroke="#6d28d9" stroke-width="2"/>
+      <line x1="0" y1="16" x2="0" y2="50" stroke="#0A193F" stroke-width="2"/>
+      <line x1="-18" y1="32" x2="18" y2="32" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="-16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <text x="0" y="104" text-anchor="middle" font-size="18" font-weight="700">Contacto</text>
+      <text x="0" y="124" text-anchor="middle" font-size="13" fill="#5c6b80">recibe el aviso</text>
+    </g>
+    <g transform="translate(1048,730)">
+      <circle cx="0" cy="0" r="16" fill="#ecfdf3" stroke="#0e7490" stroke-width="2"/>
+      <line x1="0" y1="16" x2="0" y2="50" stroke="#0A193F" stroke-width="2"/>
+      <line x1="-18" y1="32" x2="18" y2="32" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="-16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <line x1="0" y1="50" x2="16" y2="76" stroke="#0A193F" stroke-width="2"/>
+      <text x="0" y="104" text-anchor="middle" font-size="18" font-weight="700">Financiador</text>
+      <text x="0" y="124" text-anchor="middle" font-size="13" fill="#5c6b80">obra social o prepaga</text>
+    </g>
+  </g>
+
+  <text x="168" y="868" fill="#5c6b80" font-family="Segoe UI, system-ui, sans-serif" font-size="15">Código rojo, desde la pantalla bloqueada o la home. Fuera de esta etapa: flota, app propia y el 107.</text>
+
+  <g font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#172033">
+    <line x1="168" y1="900" x2="228" y2="900" stroke="#0A193F" stroke-width="2"/>
+    <text x="240" y="905">Asociación: el actor participa</text>
+    <line x1="520" y1="900" x2="580" y2="900" stroke="#5b21b6" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="592" y="905">«incluye»: ocurre al confirmar</text>
+    <line x1="168" y1="940" x2="228" y2="940" stroke="#b45309" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="240" y="945">«extiende»: cancelar corta el aviso</text>
+  </g>
+</svg>
